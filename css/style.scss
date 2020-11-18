@@ -5,35 +5,66 @@
     padding: 0;
 }
 
-body {display:flex;
+body {
+    display: flex;
     flex-direction: column;
     background-color: var(--primary-col);
     color: var(--secondary-col);
     font-family: var(--main-font);
+
     .head {
         padding: 25px;
+        width: 100%;
         text-align: center;
         background-color: var(--secondary-col);
         color: var(--primary-col);
+
         h1 {
             font-size: 50px;
             padding-bottom: 10px;
         }
+
         h3 {
             font-size: 14px;
             font-style: italic;
         }
     }
+
     .container {
+        padding: 10px;
         margin: 80px auto;
-        display:flex;
+        display: flex;
         flex-direction: column;
+
         .buttongroup {
             display: flex;
         }
+
         .button {
             margin: 4px;
-            padding: 30px 60px;
+            padding: 20px 60px;
+            color: var(--primary-col);
+            font-size: 30px;
+            font-weight: bold;
+            transition: 0.6s ;
         }
+
+        .button:hover {
+            font-size: 34px;
+            border: 2px solid var(--secondary-col);
+            border-radius: 15px;
+            background-color: var(--primary-col);
+            color: var(--secondary-col);
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .buttongroup {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 80vw;
     }
 }
