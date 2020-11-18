@@ -5,7 +5,12 @@
     padding: 0;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 body {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     background-color: var(--primary-col);
@@ -13,8 +18,9 @@ body {
     font-family: var(--main-font);
 
     .head {
+        box-sizing: border-box;
         padding: 25px;
-        width: 100%;
+        width: 100vw;
         text-align: center;
         background-color: var(--secondary-col);
         color: var(--primary-col);
@@ -39,11 +45,13 @@ body {
         .buttongroup {
             display: flex;
             align-content: space-between;
+
             img {
                 width: 10vw;
                 align-self: center;
                 padding: 20px 0px;
             }
+
             .card {
                 display: flex;
                 flex-direction: column;
@@ -53,14 +61,16 @@ body {
         .button {
             margin: 4px;
             width: 22vw;
-            padding: 20px 60px;
+            align-content: center;
+            padding: 2vh 4vw;
             color: var(--primary-col);
             font-size: 30px;
             font-weight: bold;
-            transition: 0.6s ;
+            transition: 0.6s;
             border-radius: 0px;
             border: 0px;
         }
+
         .play {
             width: auto;
         }
@@ -75,12 +85,21 @@ body {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
     .buttongroup {
         flex-direction: column;
+
+        .card {
+            width: 80vw;
+            display: flex;
+
+            .button {
+                width: auto;
+            }
+        }
     }
 
-    .button {
-        width: 80vw;
-    }
+
+
+
 }

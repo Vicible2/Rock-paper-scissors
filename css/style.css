@@ -9,7 +9,14 @@
   padding: 0;
 }
 
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,8 +30,10 @@ body {
 }
 
 body .head {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 25px;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   background-color: var(--secondary-col);
   color: var(--primary-col);
@@ -81,7 +90,9 @@ body .container .buttongroup .card {
 body .container .button {
   margin: 4px;
   width: 22vw;
-  padding: 20px 60px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 2vh 4vw;
   color: var(--primary-col);
   font-size: 30px;
   font-weight: bold;
@@ -103,15 +114,21 @@ body .container .button:hover {
   color: var(--secondary-col);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .buttongroup {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .button {
+  .buttongroup .card {
     width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .buttongroup .card .button {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
