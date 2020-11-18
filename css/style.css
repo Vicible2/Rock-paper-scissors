@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+:root {
+  --primary-col: #6d3d46;
+  --secondary-col: #fff;
+  --Main-font: 'Raleway', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-col);
+  color: var(--secondary-col);
+}
+/*# sourceMappingURL=style.css.map */
