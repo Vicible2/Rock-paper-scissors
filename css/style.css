@@ -1,6 +1,7 @@
 :root {
-  --primary-col: #2e2d2c;
-  --secondary-col:  #f5a003;
+  --primary-col: #1B1B1B;
+  --secondary-col:  #FF9900;
+  --third-col: #363636;
   --main-font: 'Raleway', sans-serif;
   --accent-col: #fff;
 }
@@ -25,7 +26,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: var(--primary-col);
+  background-color: var(--third-col);
   color: var(--secondary-col);
   font-family: var(--main-font);
 }
@@ -36,18 +37,35 @@ body .head {
   padding: 25px;
   width: 100vw;
   text-align: center;
-  background-color: var(--secondary-col);
+  background-color: var(--primary-col);
   color: var(--primary-col);
 }
 
 body .head h1 {
+  color: #fff;
   font-size: 50px;
   padding-bottom: 10px;
+}
+
+body .head h1 .schaar {
+  color: var(--primary-col);
+  background-color: var(--secondary-col);
+  border-radius: 5px;
+  padding: 4px 10px;
 }
 
 body .head h3 {
   font-size: 14px;
   font-style: italic;
+  color: var(--accent-col);
+  margin-top: 15px;
+}
+
+body .head h3 .fill {
+  color: var(--primary-col);
+  background-color: var(--secondary-col);
+  border-radius: 3px;
+  padding: 2px 5px;
 }
 
 body .container {
