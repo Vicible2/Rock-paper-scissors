@@ -59,7 +59,7 @@ body {
         }
 
         .button {
-            margin: 4px;
+            margin: 1vw;
             width: 22vw;
             align-content: center;
             padding: 2vh 4vw;
@@ -85,7 +85,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 730px) {
     .buttongroup {
         flex-direction: column;
 
