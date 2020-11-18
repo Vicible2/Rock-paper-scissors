@@ -38,10 +38,21 @@ body {
 
         .buttongroup {
             display: flex;
+            align-content: space-between;
+            img {
+                width: 10vw;
+                align-self: center;
+                padding: 20px 0px;
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         .button {
             margin: 4px;
+            width: 22vw;
             padding: 20px 60px;
             color: var(--primary-col);
             font-size: 30px;
@@ -49,6 +60,9 @@ body {
             transition: 0.6s ;
             border-radius: 0px;
             border: 0px;
+        }
+        .play {
+            width: auto;
         }
 
         .button:hover {

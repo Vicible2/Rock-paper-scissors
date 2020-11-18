@@ -56,10 +56,31 @@ body .container .buttongroup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+body .container .buttongroup img {
+  width: 10vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 20px 0px;
+}
+
+body .container .buttongroup .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .container .button {
   margin: 4px;
+  width: 22vw;
   padding: 20px 60px;
   color: var(--primary-col);
   font-size: 30px;
@@ -68,6 +89,10 @@ body .container .button {
   transition: 0.6s;
   border-radius: 0px;
   border: 0px;
+}
+
+body .container .play {
+  width: auto;
 }
 
 body .container .button:hover {
