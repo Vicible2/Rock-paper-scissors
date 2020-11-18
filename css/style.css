@@ -88,7 +88,7 @@ body .container .buttongroup .card {
 }
 
 body .container .button {
-  margin: 1vw;
+  margin: 0.5vw;
   width: 22vw;
   -ms-flex-line-pack: center;
       align-content: center;
