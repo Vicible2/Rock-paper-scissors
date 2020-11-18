@@ -5,7 +5,23 @@
     padding: 0;
 }
 
-body {
+body {display:flex;
+    flex-direction: column;
     background-color: var(--primary-col);
     color: var(--secondary-col);
+    font-family: var(--main-font);
+    .head {
+        padding: 25px;
+        text-align: center;
+        background-color: var(--secondary-col);
+        color: var(--primary-col);
+        h1 {
+            font-size: 50px;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
 }

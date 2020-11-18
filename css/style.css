@@ -1,7 +1,7 @@
 :root {
   --primary-col: #6d3d46;
   --secondary-col: #fff;
-  --Main-font: 'Raleway', sans-serif;
+  --main-font: 'Raleway', sans-serif;
 }
 
 * {
@@ -10,7 +10,32 @@
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--primary-col);
   color: var(--secondary-col);
+  font-family: var(--main-font);
+}
+
+body .head {
+  padding: 25px;
+  text-align: center;
+  background-color: var(--secondary-col);
+  color: var(--primary-col);
+}
+
+body .head h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+body .head h3 {
+  font-size: 14px;
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */
