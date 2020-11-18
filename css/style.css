@@ -132,10 +132,10 @@ body .container .button {
 
 body .container .choice:focus {
   font-size: 34px;
-  border: 2px solid var(--accent-col);
+  /* border: 2px solid var(--accent-col); */
   border-radius: 15px;
   background-color: var(--primary-col);
-  color: var(--secondary-col);
+  color: var(--accent-col);
 }
 
 body .container .play {
