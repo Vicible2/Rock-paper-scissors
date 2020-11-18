@@ -1,7 +1,8 @@
 :root {
-  --primary-col: #6d3d46;
-  --secondary-col: #fff;
+  --primary-col: #2e2d2c;
+  --secondary-col:  #f5a003;
   --main-font: 'Raleway', sans-serif;
+  --accent-col: #fff;
 }
 
 * {
@@ -59,6 +60,13 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* .button:hover {
+            font-size: 34px;
+            border: 2px solid var(--secondary-col);
+            border-radius: 15px;
+            background-color: var(--primary-col);
+            color: var(--secondary-col);
+        } */
 }
 
 body .container .buttongroup {
@@ -94,24 +102,35 @@ body .container .button {
       align-content: center;
   padding: 2vh 4vw;
   color: var(--primary-col);
+  background-color: var(--secondary-col);
   font-size: 30px;
   font-weight: bold;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   border-radius: 2px;
   border: 0px;
+  outline: none;
+}
+
+body .container .choice:focus {
+  font-size: 34px;
+  border: 2px solid var(--accent-col);
+  border-radius: 15px;
+  background-color: var(--primary-col);
+  color: var(--secondary-col);
 }
 
 body .container .play {
   width: auto;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
-body .container .button:hover {
-  font-size: 34px;
-  border: 2px solid var(--secondary-col);
+body .container .play:active {
   border-radius: 15px;
-  background-color: var(--primary-col);
-  color: var(--secondary-col);
+  background-color: var(--accent-col);
+  border: 1px solid var(--primary-col);
+  font-size: 34px;
 }
 
 @media screen and (max-width: 730px) {

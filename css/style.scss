@@ -64,24 +64,43 @@ body {
             align-content: center;
             padding: 2vh 4vw;
             color: var(--primary-col);
+            background-color: var(--secondary-col);
             font-size: 30px;
             font-weight: bold;
-            transition: 0.4s;
+            transition: 0.2s;
             border-radius: 2px;
             border: 0px;
+            outline: none;
+        }
+
+        .choice {
+            &:focus {
+                font-size: 34px;                
+                border: 2px solid var(--accent-col);
+                border-radius: 15px;
+                background-color: var(--primary-col);
+                color: var(--secondary-col);
+            }
         }
 
         .play {
             width: auto;
+            transition: 0.1s;
+            &:active {
+                border-radius: 15px;
+                background-color: var(--accent-col);
+                border: 1px solid var(--primary-col);
+                font-size: 34px;
+            }
         }
 
-        .button:hover {
+        /* .button:hover {
             font-size: 34px;
             border: 2px solid var(--secondary-col);
             border-radius: 15px;
             background-color: var(--primary-col);
             color: var(--secondary-col);
-        }
+        } */
     }
 }
 
