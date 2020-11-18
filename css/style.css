@@ -98,7 +98,7 @@ body .container .button {
   font-weight: bold;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 0px;
+  border-radius: 2px;
   border: 0px;
 }
 
