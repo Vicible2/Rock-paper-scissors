@@ -40,7 +40,7 @@ playButton.addEventListener('click', function () {
     document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
     console.log("computer picked " + computerPick);
 
-
+// compare yourpick to different options, possible to write shorter?
     if (yourPick === "rock") {
         if (computerPick === "paper") {
             announcement = "You Lost!";
@@ -77,6 +77,8 @@ playButton.addEventListener('click', function () {
             announcement = "It's a TIE!";
         }
     }
+
+    //Use if else if statements to check what value announcement has: change class -> so background in css with every different answer
     console.log(announcement);
     document.querySelector('.result').innerHTML = announcement;
     if (announcement === "You Lost!") {
