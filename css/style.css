@@ -79,7 +79,6 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: green;
   /* .button:hover {
             font-size: 34px;
             border: 2px solid var(--secondary-col);
@@ -163,7 +162,6 @@ body .container .results {
       align-content: stretch;
   width: auto;
   color: white;
-  background-color: red;
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -181,9 +179,10 @@ body .container .results .yP, body .container .results .cP {
 
 body .container .result {
   width: auto;
-  background-color: blue;
+  background-color: var(--primary-col);
   font-size: 30px;
   text-align: var(--center);
+  color: var(--accent-col);
 }
 
 @media screen and (max-width: 730px) {

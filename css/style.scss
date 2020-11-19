@@ -58,7 +58,6 @@ body {
         margin: 80px auto;
         display: flex;
         flex-direction: column;
-        background-color: green;
 
         .buttongroup {
             display: flex;
@@ -119,7 +118,6 @@ body {
             align-content: stretch;
             width: auto;
             color: white;
-            background-color: red;
             font-size: 20px;
             text-transform: capitalize;
             .yP, .cP {
@@ -135,9 +133,10 @@ body {
         }
         .result {
             width: auto;
-            background-color: blue;
+            background-color: var(--primary-col);
             font-size: 30px;
             text-align: var(--center);
+            color: var(--accent-col);
         }
 
         /* .button:hover {

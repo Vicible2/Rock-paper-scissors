@@ -14,7 +14,6 @@ let computerPick = "";
 let announcement = "";
 //empty string for announcement (will fill in empty HTML tag with result), see line 40 to 76
 
-
 //playerChoice
 
 choiceButtons.forEach(choice => {
@@ -22,6 +21,8 @@ choiceButtons.forEach(choice => {
     choice.addEventListener('click', function () {
         yourPick = choice.value;
         //yourPick will be defined as: the clicked(and previously defined) choice = button, its value (given in html), so rock paper or scissors
+        document.querySelector('.yP').innerHTML = "You picked: " + yourPick;
+        
         console.log("you picked " + yourPick);
     })
 
@@ -34,6 +35,8 @@ playButton.addEventListener('click', function () {
             // define generated number as random for future computerpick, this wil generate number between 0 and 2
             computerPick = choices[random];
             //choices[random] will select the index of the array 'choices', so 0 1 or 2, random has been defined above.
+
+            document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
             console.log("computer picked " + computerPick);
 
 
