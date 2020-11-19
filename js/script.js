@@ -44,7 +44,7 @@ playButton.addEventListener('click', function () {
     if (yourPick === "rock") {
         if (computerPick === "paper") {
             announcement = "You Lost!";
-            document.querySelector('.result').getElementsByClassName.backgroundcolor = "blue";
+            
         }
         if (computerPick === "scissors") {
             announcement = "You Won!";
