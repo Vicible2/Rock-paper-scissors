@@ -21,7 +21,7 @@ choiceButtons.forEach(choice => {
         yourPick = choice.value;
         //yourPick will be defined as: the clicked(and previously defined) choice = button, its value (given in html), so rock paper or scissors
         document.querySelector('.yP').innerHTML = "You picked: " + yourPick;
-        document.querySelector('.pick').style.backgroundcolor = "blue";
+        document.querySelector('.pick').classList.remove('hide');
         console.log("you picked " + yourPick);
     })
 
@@ -29,52 +29,64 @@ choiceButtons.forEach(choice => {
 
 //computerChoice & comparison
 playButton.addEventListener('click', function () {
-            let random = Math.floor(Math.random() * 3);
-            // define generated number as random for future computerpick, this wil generate number between 0 and 2
-            computerPick = choices[random];
-            //choices[random] will select the index of the array 'choices', so 0 1 or 2, random has been defined above.
+    let random = Math.floor(Math.random() * 3);
+    // define generated number as random for future computerpick, this wil generate number between 0 and 2
+    computerPick = choices[random];
+    //choices[random] will select the index of the array 'choices', so 0 1 or 2, random has been defined above.
+    document.querySelector('.result').classList.remove('hide');
+    document.querySelector('.cP').classList.remove('hide');
 
-            document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
-            console.log("computer picked " + computerPick);
+
+    document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
+    console.log("computer picked " + computerPick);
 
 
-            if (yourPick === "rock") {
-                if (computerPick === "paper") {
-                    announcement = "You Lost!";
-                    document.querySelector('.result').getElementsByClassName.backgroundcolor = "blue";
-                }
-                if (computerPick === "scissors") {
-                    announcement = "You Won!";
-                }
-                if (computerPick === "rock") {
-                    announcement = "It's a TIE!";
-                }
-            }
+    if (yourPick === "rock") {
+        if (computerPick === "paper") {
+            announcement = "You Lost!";
+            document.querySelector('.result').getElementsByClassName.backgroundcolor = "blue";
+        }
+        if (computerPick === "scissors") {
+            announcement = "You Won!";
+        }
+        if (computerPick === "rock") {
+            announcement = "It's a TIE!";
+        }
+    }
 
-            if (yourPick === "paper") {
-                if (computerPick === "scissors") {
-                    announcement = "You Lost!";
-                }
-                if (computerPick === "rock") {
-                    announcement = "You Won!";
-                }
-                if (computerPick === "paper") {
-                    announcement = "It's a TIE!";
-                }
-            }
+    if (yourPick === "paper") {
+        if (computerPick === "scissors") {
+            announcement = "You Lost!";
+        }
+        if (computerPick === "rock") {
+            announcement = "You Won!";
+        }
+        if (computerPick === "paper") {
+            announcement = "It's a TIE!";
+        }
+    }
 
-            if (yourPick === "scissors") {
-                if (computerPick === "rock") {
-                    announcement = "You Lost!";
-                }
-                if (computerPick === "paper") {
-                    announcement = "You Won!";
-                }
-                if (computerPick === "scissors") {
-                    announcement = "It's a TIE!";
-                }
-            }
-            console.log(announcement);
-            document.querySelector('.result').innerHTML = announcement;
-
-            });
+    if (yourPick === "scissors") {
+        if (computerPick === "rock") {
+            announcement = "You Lost!";
+        }
+        if (computerPick === "paper") {
+            announcement = "You Won!";
+        }
+        if (computerPick === "scissors") {
+            announcement = "It's a TIE!";
+        }
+    }
+    console.log(announcement);
+    document.querySelector('.result').innerHTML = announcement;
+    if (announcement === "You Lost!") {
+        document.querySelector('.result').classList.remove('bgtie', 'bgwin')
+        document.querySelector('.result').classList.add('bgloss');
+    } else if (announcement === "It's a TIE!") {
+        document.querySelector('.result').classList.remove('bgloss', 'bgwin')
+        document.querySelector('.result').classList.add('bgtie');
+    } else {
+        document.querySelector('.result').classList.remove('bgtie', 'bloss')
+        document.querySelector('.result').classList.add('bgwin');
+    }
+});

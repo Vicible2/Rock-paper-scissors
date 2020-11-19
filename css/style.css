@@ -62,13 +62,6 @@ body .head h3 {
   margin-top: 15px;
 }
 
-body .head h3 .fill {
-  color: var(--primary-col);
-  background-color: var(--secondary-col);
-  border-radius: 3px;
-  padding: 2px 5px;
-}
-
 body .container {
   padding: 10px;
   margin: 80px auto;
@@ -86,6 +79,10 @@ body .container {
             background-color: var(--primary-col);
             color: var(--secondary-col);
         } */
+}
+
+body .container .hide {
+  visibility: hidden;
 }
 
 body .container .buttongroup {
@@ -172,9 +169,11 @@ body .container .results .yP, body .container .results .cP {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0.5vw;
-  font-size: 14px;
+  font-size: 18px;
   text-align: var(--center);
-  color: var(--primary-col);
+  color: var(--accent-col);
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 body .container .result {
@@ -183,6 +182,23 @@ body .container .result {
   font-size: 30px;
   text-align: var(--center);
   color: var(--accent-col);
+  border-radius: 4px;
+}
+
+body .container .bgloss {
+  background-image: url(./../assets/rain.jpg);
+  background-size: cover;
+}
+
+body .container .bgwin {
+  background-image: url(./../assets/party.jpg);
+  background-size: cover;
+}
+
+body .container .bgtie {
+  background-image: url(./../assets/tie.png);
+  background-color: var(--third-col);
+  background-size: contain;
 }
 
 @media screen and (max-width: 730px) {

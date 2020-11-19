@@ -44,12 +44,7 @@ body {
             color: var(--accent-col);
             margin-top: 15px;
 
-            .fill {
-                color: var(--primary-col);
-                background-color: var(--secondary-col);
-                border-radius: 3px;
-                padding: 2px 5px;
-            }
+            
         }
     }
 
@@ -58,7 +53,9 @@ body {
         margin: 80px auto;
         display: flex;
         flex-direction: column;
-
+        .hide {
+            visibility: hidden;
+        }
         .buttongroup {
             display: flex;
             align-content: space-between;
@@ -124,10 +121,13 @@ body {
                 width: auto;
                 flex-grow: 1;
                 margin: 0.5vw;
-                font-size: 14px;
+                font-size: 18px;
                 text-align: var(--center);
-                color: var(--primary-col);
+                color: var(--accent-col);
+                background-color: transparent;
+                text-decoration: underline;
             }
+           
             
             
         }
@@ -137,6 +137,22 @@ body {
             font-size: 30px;
             text-align: var(--center);
             color: var(--accent-col);
+            border-radius: 4px;
+            
+        }
+        .bgloss {
+            background-image: url(./../assets/rain.jpg);
+            background-size: cover;
+            
+        }
+        .bgwin {
+            background-image: url(./../assets/party.jpg);
+            background-size: cover;
+        }
+        .bgtie {
+            background-image: url(./../assets/tie.png);
+            background-color: var(--third-col);
+            background-size: contain ;
         }
 
         /* .button:hover {
