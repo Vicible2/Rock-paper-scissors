@@ -29,6 +29,7 @@ body {
             color: #fff;
             font-size: 50px;
             padding-bottom: 10px;
+
             .schaar {
                 color: var(--primary-col);
                 background-color: var(--secondary-col);
@@ -42,6 +43,7 @@ body {
             font-style: italic;
             color: var(--accent-col);
             margin-top: 15px;
+
             .fill {
                 color: var(--primary-col);
                 background-color: var(--secondary-col);
@@ -90,7 +92,7 @@ body {
 
         .choice {
             &:focus {
-                font-size: 34px;                
+                font-size: 34px;
                 /* border: 2px solid var(--accent-col); */
                 border-radius: 15px;
                 background-color: var(--primary-col);
@@ -101,11 +103,14 @@ body {
         .play {
             width: auto;
             transition: 0.1s;
+            color: var(--accent-col);
+
             &:active {
                 border-radius: 15px;
                 background-color: var(--accent-col);
                 border: 1px solid var(--primary-col);
                 font-size: 34px;
+                color: var(--primary-col);
             }
         }
 
@@ -120,20 +125,34 @@ body {
 }
 
 @media screen and (max-width: 730px) {
-    .buttongroup {
-        flex-direction: column;
 
-        .card {
-            width: 80vw;
-            display: flex;
+    .container {
+        .buttongroup {
+            flex-direction: column;
 
-            .button {
-                width: auto;
+            .card {
+                width: 70vw;
+                display: flex;
+
+                .button {
+                    width: auto;
+                }
+            }
+
+        }
+
+        #play {
+            color: white;
+            margin-top: 6vh;
+            width: auto;
+
+            &:active {
+                color: var(--primary-col);
             }
         }
+
+
+
+
     }
-
-
-
-
 }

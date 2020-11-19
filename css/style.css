@@ -142,6 +142,7 @@ body .container .play {
   width: auto;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  color: var(--accent-col);
 }
 
 body .container .play:active {
@@ -149,23 +150,32 @@ body .container .play:active {
   background-color: var(--accent-col);
   border: 1px solid var(--primary-col);
   font-size: 34px;
+  color: var(--primary-col);
 }
 
 @media screen and (max-width: 730px) {
-  .buttongroup {
+  .container .buttongroup {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .buttongroup .card {
-    width: 80vw;
+  .container .buttongroup .card {
+    width: 70vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .buttongroup .card .button {
+  .container .buttongroup .card .button {
     width: auto;
+  }
+  .container #play {
+    color: white;
+    margin-top: 6vh;
+    width: auto;
+  }
+  .container #play:active {
+    color: var(--primary-col);
   }
 }
 /*# sourceMappingURL=style.css.map */
