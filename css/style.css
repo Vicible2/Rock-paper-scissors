@@ -153,6 +153,14 @@ body .container .play:active {
   color: var(--primary-col);
 }
 
+body .container .result {
+  width: auto;
+  color: white;
+  background-color: red;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
 @media screen and (max-width: 730px) {
   .container .buttongroup {
     -webkit-box-orient: vertical;
