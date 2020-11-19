@@ -11,7 +11,8 @@ let playButton = document.querySelector('.play');
 let choices = ['rock', 'paper', 'scissors']; // array for choices variables
 
 
-let yourPick = ""; // empty string to fill in later with players choice (rock/paper/scissors)
+let yourPick = "";
+// empty string to fill in later with players choice (rock/paper/scissors)
 //can also be written without string (let yourPick) but is for clarity
 let computerPick ="";
 //empty string for computerpick, will be filled in by index of choices array. -> index will be randomly generated.
