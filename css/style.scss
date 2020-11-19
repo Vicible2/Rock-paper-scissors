@@ -47,15 +47,15 @@ body {
             
         }
     }
-
+    .hide {
+        visibility: hidden;
+    }
     .container {
         padding: 10px;
         margin: 80px auto;
         display: flex;
         flex-direction: column;
-        .hide {
-            visibility: hidden;
-        }
+        
         .buttongroup {
             display: flex;
             align-content: space-between;
@@ -162,6 +162,17 @@ body {
             background-color: var(--primary-col);
             color: var(--secondary-col);
         } */
+    }
+    .score {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 0;        
+        width: auto;
+        height: 5vh;
+        border: 1px solid var(--accent-col);
+        background-color: var(--primary-col);
+        padding: 10px 15px;
     }
 }
 

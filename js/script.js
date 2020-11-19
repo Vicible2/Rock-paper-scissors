@@ -10,6 +10,8 @@ let choices = ['rock', 'paper', 'scissors'];
 let yourPick = "";
 let computerPick = "";
 //empty strings for clarity, also possible to just write: let computerPick, let yourPick
+let computerScore = "";
+let playerScore = "";
 
 let announcement = "";
 //empty string for announcement (will fill in empty HTML tag with result), see line 40 to 76
@@ -37,14 +39,20 @@ playButton.addEventListener('click', function () {
     document.querySelector('.cP').classList.remove('hide');
 
 
+    //show scores: still causing issues for results
+    /*  
+    document.querySelector('.score').classList.remove('hide');
+    document.querySelector('.yS').innerHTML = "Your score is " + yourScore;
+    document.querySelector('.cS').innterHTML = "Computer score is " + computerScore;
+    */
     document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
     console.log("computer picked " + computerPick);
 
-// compare yourpick to different options, possible to write shorter?
+    // compare yourpick to different options, possible to write shorter?
     if (yourPick === "rock") {
         if (computerPick === "paper") {
             announcement = "You Lost!";
-            
+
         }
         if (computerPick === "scissors") {
             announcement = "You Won!";
@@ -84,11 +92,19 @@ playButton.addEventListener('click', function () {
     if (announcement === "You Lost!") {
         document.querySelector('.result').classList.remove('bgtie', 'bgwin')
         document.querySelector('.result').classList.add('bgloss');
+        /* add 1 to var computerScore, not working yet
+         computerScore ++; 
+         */
     } else if (announcement === "It's a TIE!") {
         document.querySelector('.result').classList.remove('bgloss', 'bgwin')
         document.querySelector('.result').classList.add('bgtie');
+
     } else {
         document.querySelector('.result').classList.remove('bgtie', 'bloss')
         document.querySelector('.result').classList.add('bgwin');
+        /* add 1 to var computerScore, not working yet
+        playerScore ++;
+        */
+
     }
 });
