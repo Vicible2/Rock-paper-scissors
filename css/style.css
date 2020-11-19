@@ -4,6 +4,7 @@
   --third-col: #363636;
   --main-font: 'Raleway', sans-serif;
   --accent-col: #fff;
+  --center: center;
 }
 
 * {
@@ -36,7 +37,7 @@ body .head {
           box-sizing: border-box;
   padding: 25px;
   width: 100vw;
-  text-align: center;
+  text-align: var(--center);
   background-color: var(--primary-col);
   color: var(--primary-col);
 }
@@ -78,6 +79,7 @@ body .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: green;
   /* .button:hover {
             font-size: 34px;
             border: 2px solid var(--secondary-col);
@@ -97,9 +99,9 @@ body .container .buttongroup {
 
 body .container .buttongroup img {
   width: 10vw;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: var(--center);
+      -ms-grid-row-align: var(--center);
+      align-self: var(--center);
   padding: 20px 0px;
 }
 
@@ -116,8 +118,8 @@ body .container .buttongroup .card {
 body .container .button {
   margin: 0.5vw;
   width: 22vw;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-line-pack: var(--center);
+      align-content: var(--center);
   padding: 2vh 4vw;
   color: var(--primary-col);
   background-color: var(--secondary-col);
@@ -153,12 +155,35 @@ body .container .play:active {
   color: var(--primary-col);
 }
 
-body .container .result {
+body .container .results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
   width: auto;
   color: white;
   background-color: red;
   font-size: 20px;
   text-transform: capitalize;
+}
+
+body .container .results .yP, body .container .results .cP {
+  width: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0.5vw;
+  font-size: 14px;
+  text-align: var(--center);
+  color: var(--primary-col);
+}
+
+body .container .result {
+  width: auto;
+  background-color: blue;
+  font-size: 30px;
+  text-align: var(--center);
 }
 
 @media screen and (max-width: 730px) {
@@ -176,6 +201,13 @@ body .container .result {
   }
   .container .buttongroup .card .button {
     width: auto;
+  }
+  .container .results {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 3vh 0;
   }
   .container #play {
     color: white;
