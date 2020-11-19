@@ -15,21 +15,19 @@ let announcement = "";
 //empty string for announcement (will fill in empty HTML tag with result), see line 40 to 76
 
 //playerChoice
-
 choiceButtons.forEach(choice => {
     //forEach takes every member of choiceButtons individually, and defines each individual member as choice
     choice.addEventListener('click', function () {
         yourPick = choice.value;
         //yourPick will be defined as: the clicked(and previously defined) choice = button, its value (given in html), so rock paper or scissors
         document.querySelector('.yP').innerHTML = "You picked: " + yourPick;
-        
+        document.querySelector('.pick').style.backgroundcolor = "blue";
         console.log("you picked " + yourPick);
     })
 
 });
 
 //computerChoice & comparison
-
 playButton.addEventListener('click', function () {
             let random = Math.floor(Math.random() * 3);
             // define generated number as random for future computerpick, this wil generate number between 0 and 2
@@ -43,6 +41,7 @@ playButton.addEventListener('click', function () {
             if (yourPick === "rock") {
                 if (computerPick === "paper") {
                     announcement = "You Lost!";
+                    document.querySelector('.result').getElementsByClassName.backgroundcolor = "blue";
                 }
                 if (computerPick === "scissors") {
                     announcement = "You Won!";
