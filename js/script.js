@@ -2,6 +2,8 @@ let choiceButtons = document.querySelectorAll('.choice');
 // querySelectorAll = selecteren van alle elementen met gegeven class/ID
 let playButton = document.querySelector('.play');
 //querySelector = selecteren van specifieke class/id
+let tryagain = document.querySelector('.tryagain');
+
 
 
 let choices = ['rock', 'paper', 'scissors'];
@@ -11,12 +13,12 @@ let yourPick = "";
 let computerPick = "";
 //empty strings for clarity, also possible to just write: let computerPick, let yourPick
 
-/* Score variables, not working yet
+let pMin = "1";
+let cMin = "1";
 
 let computerScore = "";
 let playerScore = "";
 
-*/
 
 let announcement = "";
 //empty string for announcement (will fill in empty HTML tag with result), see line 40 to 76
@@ -45,14 +47,6 @@ playButton.addEventListener('click', function () {
 
     document.querySelector('.result').classList.remove('hide');
     document.querySelector('.cP').classList.remove('hide');
-
-
-    //show scores: still causing issues for results
-    /*  
-    document.querySelector('.score').classList.remove('hide');
-    document.querySelector('.yS').innerHTML = "Your score is " + yourScore;
-    document.querySelector('.cS').innterHTML = "Computer score is " + computerScore;
-    */
 
 
     document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
@@ -102,10 +96,7 @@ playButton.addEventListener('click', function () {
     if (announcement === "You Lost!") {
         document.querySelector('.result').classList.remove('bgtie', 'bgwin');
         document.querySelector('.result').classList.add('bgloss');
-        
-        /* add 1 to var computerScore, not working yet
-         computerScore ++; 
-         */
+        computerScore = cMin++;
 
     } else if (announcement === "It's a TIE!") {
         document.querySelector('.result').classList.remove('bgloss', 'bgwin');
@@ -114,10 +105,27 @@ playButton.addEventListener('click', function () {
     } else {
         document.querySelector('.result').classList.remove('bgtie', 'bloss');
         document.querySelector('.result').classList.add('bgwin');
-
-        /* add 1 to var computerScore, not working yet
-        playerScore ++;
-        */
+        playerScore = pMin++;
 
     }
+    document.querySelector('.score').classList.remove('hide');
+    document.querySelector('.yS').innerHTML = "Your score is: " + playerScore;
+    document.querySelector('.cS').innerHTML = "The computers score is: " + computerScore;
+
+    if (playerScore <= computerScore - 2) {
+        tryagain.classList.remove('hide');
+        tryagain.innerHTML = "Tired of losing? <br> Play again!"
+    } else if (computerScore <= playerScore - 2) {
+        tryagain.classList.remove('hide');
+        tryagain.innerHTML = "Give him a chance will ya! <br> Play again!"
+
+    } else if (computerScore > 5 || playerScore > 5) {
+        tryagain.classList.remove('hide');
+        tryagain.innerHTML = "Want a reset? <br> Play again!"
+    } else {};
+    tryagain.addEventListener('click', function () {
+        location.reload();
+
+    })
+
 });

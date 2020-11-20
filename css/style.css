@@ -128,6 +128,11 @@ body .container .button {
   outline: none;
 }
 
+body .container .choice:hover {
+  cursor: pointer;
+  color: var(--accent-col);
+}
+
 body .container .choice:focus {
   font-size: 34px;
   /* border: 2px solid var(--accent-col); */
@@ -141,6 +146,11 @@ body .container .play {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   color: var(--accent-col);
+}
+
+body .container .play:hover {
+  color: var(--third-col);
+  cursor: pointer;
 }
 
 body .container .play:active {
@@ -203,6 +213,13 @@ body .container .bgtie {
 }
 
 body .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -211,8 +228,29 @@ body .score {
   width: auto;
   height: 5vh;
   border: 1px solid var(--accent-col);
+  border-radius: 4px;
   background-color: var(--primary-col);
   padding: 10px 15px;
+}
+
+body .tryagain {
+  position: fixed;
+  text-align: center;
+  right: 0%;
+  bottom: 0;
+  border-radius: 4px;
+  height: 5vh;
+  border: 1px solid var(--accent-col);
+  width: auto;
+  background-color: var(--primary-col);
+  padding: 10px 10px;
+}
+
+body .tryagain:hover {
+  padding: 12px 12px;
+  border: 2px solid var(--secondary-col);
+  color: var(--accent-col);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 730px) {
