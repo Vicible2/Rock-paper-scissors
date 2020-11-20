@@ -10,8 +10,13 @@ let choices = ['rock', 'paper', 'scissors'];
 let yourPick = "";
 let computerPick = "";
 //empty strings for clarity, also possible to just write: let computerPick, let yourPick
+
+/* Score variables, not working yet
+
 let computerScore = "";
 let playerScore = "";
+
+*/
 
 let announcement = "";
 //empty string for announcement (will fill in empty HTML tag with result), see line 40 to 76
@@ -25,7 +30,7 @@ choiceButtons.forEach(choice => {
         document.querySelector('.yP').innerHTML = "You picked: " + yourPick;
         document.querySelector('.pick').classList.remove('hide');
         console.log("you picked " + yourPick);
-    })
+    });
 
 });
 
@@ -95,7 +100,7 @@ playButton.addEventListener('click', function () {
     console.log(announcement);
     document.querySelector('.result').innerHTML = announcement;
     if (announcement === "You Lost!") {
-        document.querySelector('.result').classList.remove('bgtie', 'bgwin')
+        document.querySelector('.result').classList.remove('bgtie', 'bgwin');
         document.querySelector('.result').classList.add('bgloss');
         
         /* add 1 to var computerScore, not working yet
@@ -103,11 +108,11 @@ playButton.addEventListener('click', function () {
          */
 
     } else if (announcement === "It's a TIE!") {
-        document.querySelector('.result').classList.remove('bgloss', 'bgwin')
+        document.querySelector('.result').classList.remove('bgloss', 'bgwin');
         document.querySelector('.result').classList.add('bgtie');
 
     } else {
-        document.querySelector('.result').classList.remove('bgtie', 'bloss')
+        document.querySelector('.result').classList.remove('bgtie', 'bloss');
         document.querySelector('.result').classList.add('bgwin');
 
         /* add 1 to var computerScore, not working yet
