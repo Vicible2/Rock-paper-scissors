@@ -163,7 +163,8 @@ body .container .results {
   text-transform: capitalize;
 }
 
-body .container .results .yP, body .container .results .cP {
+body .container .results .yP,
+body .container .results .cP {
   width: auto;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

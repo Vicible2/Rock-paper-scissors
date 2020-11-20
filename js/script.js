@@ -20,8 +20,8 @@ let announcement = "";
 choiceButtons.forEach(choice => {
     //forEach takes every member of choiceButtons individually, and defines each individual member as choice
     choice.addEventListener('click', function () {
-        yourPick = choice.value;
         //yourPick will be defined as: the clicked(and previously defined) choice = button, its value (given in html), so rock paper or scissors
+        yourPick = choice.value;
         document.querySelector('.yP').innerHTML = "You picked: " + yourPick;
         document.querySelector('.pick').classList.remove('hide');
         console.log("you picked " + yourPick);
@@ -31,10 +31,13 @@ choiceButtons.forEach(choice => {
 
 //computerChoice & comparison
 playButton.addEventListener('click', function () {
-    let random = Math.floor(Math.random() * 3);
+
     // define generated number as random for future computerpick, this wil generate number between 0 and 2
-    computerPick = choices[random];
+    let random = Math.floor(Math.random() * 3);
     //choices[random] will select the index of the array 'choices', so 0 1 or 2, random has been defined above.
+    computerPick = choices[random];
+
+
     document.querySelector('.result').classList.remove('hide');
     document.querySelector('.cP').classList.remove('hide');
 
@@ -45,6 +48,8 @@ playButton.addEventListener('click', function () {
     document.querySelector('.yS').innerHTML = "Your score is " + yourScore;
     document.querySelector('.cS').innterHTML = "Computer score is " + computerScore;
     */
+
+
     document.querySelector('.cP').innerHTML = "The computer picked: " + computerPick;
     console.log("computer picked " + computerPick);
 
@@ -86,15 +91,17 @@ playButton.addEventListener('click', function () {
         }
     }
 
-    //Use if else if statements to check what value announcement has: change class -> so background in css with every different answer
+    //Use if else if statements to check announcement value, to change BG of result dependant on result
     console.log(announcement);
     document.querySelector('.result').innerHTML = announcement;
     if (announcement === "You Lost!") {
         document.querySelector('.result').classList.remove('bgtie', 'bgwin')
         document.querySelector('.result').classList.add('bgloss');
+        
         /* add 1 to var computerScore, not working yet
          computerScore ++; 
          */
+
     } else if (announcement === "It's a TIE!") {
         document.querySelector('.result').classList.remove('bgloss', 'bgwin')
         document.querySelector('.result').classList.add('bgtie');
@@ -102,6 +109,7 @@ playButton.addEventListener('click', function () {
     } else {
         document.querySelector('.result').classList.remove('bgtie', 'bloss')
         document.querySelector('.result').classList.add('bgwin');
+
         /* add 1 to var computerScore, not working yet
         playerScore ++;
         */

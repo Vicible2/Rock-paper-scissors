@@ -44,18 +44,20 @@ body {
             color: var(--accent-col);
             margin-top: 15px;
 
-            
+
         }
     }
+
     .hide {
         visibility: hidden;
     }
+
     .container {
         padding: 10px;
         margin: 80px auto;
         display: flex;
         flex-direction: column;
-        
+
         .buttongroup {
             display: flex;
             align-content: space-between;
@@ -110,6 +112,7 @@ body {
                 color: var(--primary-col);
             }
         }
+
         .results {
             display: flex;
             align-content: stretch;
@@ -117,7 +120,9 @@ body {
             color: white;
             font-size: 20px;
             text-transform: capitalize;
-            .yP, .cP {
+
+            .yP,
+            .cP {
                 width: auto;
                 flex-grow: 1;
                 margin: 0.5vw;
@@ -127,10 +132,11 @@ body {
                 background-color: transparent;
                 text-decoration: underline;
             }
-           
-            
-            
+
+
+
         }
+
         .result {
             width: auto;
             background-color: var(--primary-col);
@@ -138,21 +144,24 @@ body {
             text-align: var(--center);
             color: var(--accent-col);
             border-radius: 4px;
-            
+
         }
+
         .bgloss {
             background-image: url(./../assets/rain.jpg);
             background-size: cover;
-            
+
         }
+
         .bgwin {
             background-image: url(./../assets/party.jpg);
             background-size: cover;
         }
+
         .bgtie {
             background-image: url(./../assets/tie.png);
             background-color: var(--third-col);
-            background-size: contain ;
+            background-size: contain;
         }
 
         /* .button:hover {
@@ -163,11 +172,12 @@ body {
             color: var(--secondary-col);
         } */
     }
+
     .score {
         position: fixed;
         left: 50%;
         transform: translate(-50%, 0);
-        bottom: 0;        
+        bottom: 0;
         width: auto;
         height: 5vh;
         border: 1px solid var(--accent-col);
@@ -192,10 +202,12 @@ body {
             }
 
         }
+
         .results {
             flex-direction: column;
             margin: 3vh 0;
         }
+
         #play {
             color: white;
             margin-top: 6vh;
